@@ -3,270 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit Khandelwal - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            background: #2d89ff;
-            color: #fff;
-            width: 300px;
-            padding: 2rem 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: fixed;
-            height: 100%;
-            left: 0;
-            top: 0;
-        }
-
-        .sidebar img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-
-        .sidebar h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            text-align: center;
-        }
-
-        .sidebar p {
-            font-size: 1rem;
-            margin: 0.5rem 0;
-            text-align: center;
-        }
-
-        .sidebar nav {
-            margin-top: 2rem;
-            width: 100%;
-        }
-
-        .sidebar nav a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            padding: 0.8rem 1rem;
-            margin: 0.3rem 0;
-            background: #2d89ff;
-            text-align: center;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .sidebar nav a:hover {
-            background: #1a5fbd;
-        }
-
-        /* Main content */
-        .main-content {
-            margin-left: 300px;
-            padding: 2rem;
-            flex: 1;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero button {
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            background: #2d89ff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .hero button:hover {
-            background: #1a5fbd;
-        }
-
-        /* Section Styles */
-        .section {
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-
-        .section h3 {
-            font-size: 1.8rem;
-            border-bottom: 2px solid #2d89ff;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* FadeIn Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        footer a {
-            color: #2d89ff;
-            text-decoration: none;
-        }
-
-        /* Horizontal Navigation Bar */
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .tab-button {
-            background-color: #2d89ff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            margin: 0 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .tab-button:hover {
-            background-color: #1a5fbd;
-        }
-
-        /* Tab content */
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-    </style>
+    <title>Sumit Khandelwal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to your custom CSS -->
+	<link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <img src="profile.jpg" alt="Sumit's Photo">
+<!-- Navigation Bar -->
+<nav >
+    <header class="navbar-expand-lg custom-navbar bg-primary  text-center py-10 ">
         <h1>Sumit Khandelwal</h1>
-        <p>IT Engineer | System Administrator | Tech Enthusiast</p>
-        <nav>
-            <a href="#about" onclick="showTab('about')">About</a>
-            <a href="#skills" onclick="showTab('skills')">Skills</a>
-            <a href="#education" onclick="showTab('education')">Education</a>
-            <a href="#experience" onclick="showTab('experience')">Experience</a>
-            <a href="#contact" onclick="showTab('contact')">Contact</a>
-        </nav>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Horizontal Navigation -->
-        <div class="tabs">
-            <button class="tab-button" onclick="showTab('about')">About Me</button>
-            <button class="tab-button" onclick="showTab('skills')">Skills</button>
-            <button class="tab-button" onclick="showTab('education')">Education</button>
-            <button class="tab-button" onclick="showTab('experience')">Experience</button>
-            <button class="tab-button" onclick="showTab('contact')">Contact</button>
-        </div>
-
-        <!-- Tab Content -->
-        <div id="about" class="tab-content active">
-            <div class="section">
-                <h3>About Me</h3>
-                <p>I am an IT Engineer with expertise in system administration, troubleshooting, and hardware/software integration.</p>
-            </div>
-        </div>
-
-        <div id="skills" class="tab-content">
-            <div class="section">
-                <h3>Skills</h3>
-                <ul>
-                    <li>Operating Systems: Windows 11/10/7, Windows Server 2019</li>
-                    <li>Programming Languages: HTML, CSS, JavaScript, Java, Python, PHP</li>
-                    <li>Networking: LANs, WANs, TCP/IP, DNS, VMware</li>
-                    <li>Tools: ERP Dynamics, MATLAB, Siebel, CRM PeopleSoft</li>
+        <p class="lead">Sr. IT Engineer | Skilled in System Administration, Networking, & ERP Management<br>
+						Proficient in Python, Linux, & Cloud Technologies <br>
+						Pursuing B.Sc. in AI & Data Science<br></p>
+        <div class="container ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Information</a>
+                    </li>
                 </ul>
             </div>
         </div>
+	</header>
+</nav>
 
-        <div id="education" class="tab-content">
-            <div class="section">
-                <h3>Education</h3>
-                <ul>
-                    <li>B.Sc. in Artificial Intelligence & Data Science - K.N. University (2023–Present)</li>
-                    <li>12th - Vidya Vihar School and Jr. College, Virar West (2018)</li>
-                    <li>10th - Matrix Academy School, Virar West (2016)</li>
-                </ul>
+<!-- About Details -->
+    <section class="container my-5" id="about">
+        <h2 class="text-center">About Me</h2>
+        <h6><p class="text-center">Hi, I'm Sumit Khandelwal. Experienced IT Support Professional to handle in MATLAB server administration, ERP dynamics, troubleshooting, and team leadership. Results-driven and adept at optimizing business operations through technology, I excel in coordinating with vendors, mentoring team members, and resolving complex issues.</p></h6>
+        <h6><p class="text-center">I am seeking a position where I can utilize my skills as a system administrator in a hi-tech environment with committed and dedicated people.</p></h6>
+    </section>
+	
+<!-- skills Details -->
+    <section class="bg-light py-5" id="skills">
+        <div class="container">
+            <h2 class="text-center">Skills</h2>
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h6>Basic Knowledge of Ubuntu</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h6>Windows 11/10/7, Windows Server 2019</h6>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h6>Gaining proficiency in programming languages like HTML, CSS, JavaScript, Java, Python, PHP, etc.</h3>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h6>ERP Dynamic Microsoft</h6>
+                </div>
+				<div class="col-md-3 text-center">
+                    <h6>Application Troubleshooting: Siebel, Citrix, CRM PeopleSoft, Genesis, Ansys, Creo, MATLAB</h3>
+                </div>
+				<div class="col-md-3 text-center">
+                    <h6>kill of Assets management & Vendor management</h6>
+                </div>
+				<div class="col-md-3 text-center">
+                    <h6>MS Office, Internet Issues, Outlook Issues, windows installation, Backup user data</h6>
+                </div>
+				<div class="col-md-3 text-center">
+                    <h6>Web Ticketing tool:- Sapphire, SnipIT</h6>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div id="experience" class="tab-content">
-            <div class="section">
-                <h3>Experience</h3>
-                <ul>
-                    <li>Sr. IT Engineer - Matter Motor Works (Apr 2024 – Present)</li>
-                    <li>IT Engineer - Matter Motor Works (May 2022 – Mar 2024)</li>
-                    <li>Acting Supervisor - Tech Mahindra (Nov 2021 – May 2022)</li>
-                    <li>Desktop Support Engineer L1 - Tech Mahindra (Nov 2020 – Nov 2021)</li>
-                </ul>
+<!-- Experience Details -->
+    <section class="container my-5" id="experience">
+        <h2 class="text-center">Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Sr. IT Support at Matter Motor Works Pvt. Ltd</h3>
+                <p>Apr 2024 – Present</p>
+                <p>	•Supported ERP/DMS implementation and ensured seamless hardware/software integration.<br>
+					•Managed IT asset procurement, deployment, and lifecycle processes.<br>
+					•Resolved daily IT queries and reduced ticket turnaround times.<br>
+					•Maintained a robust software license matrix and ensured compliance.<br>
+					•Created IT documentation, FAQs, and automated workflows for process improvements.<br>
+					•Monitored IT maintenance schedules and optimized operations.<br>
+					•Supported Priority IT projects and ensured timely execution.<br>
+					•Planned and executed monthly procurement cycles aligning with organizational needs.<br>
+					•Implemented innovative solutions and automation for improved efficiency.<br>
+					</p>
+            </div>
+            <div class="timeline-item">
+                <h3>IT Support at Matter Motor Works Pvt. Ltd</h3>
+                <p>May 2022 – Mar 2024</p>
+                <p>	•Administrator Access of MATLAB Server and configure new license using Ubuntu server.<br>
+					•Configure new License in Windows server with help of Vendor.<br>
+					•Create and work on ERP dynamic Microsoft for User right and permission access.<br>
+					•Item and PR created and worked on ERP dynamic Microsoft.<br>
+					•Understand the user module to guide them and provide the knowledge in ERP.<br>
+					•Coordinate with vendor for user-based Laptop / desktop requirement.<br>
+					•Coordinate with vendor for user-based Application requirements and configuration.<br>
+					•Addition and deletion of the users from AD, shared folder group, email DL.<br>
+					•Interface well with other IT organizations and/or vendors to resolve complex and widespread problems.<br>
+					•Mentor and guide other team members.<br>
+					•Software and hardware troubleshooting within SLA.<br>
+					•Procure the asset on Priority and get the material before user Join.<br>
+					•Get the cost from many vendors and procure the material as the best price and best specs.<br>
+					•Manage the Onboarding Process.<br>
+					</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Acting Supervisor at TechMahindra</h3>
+                <p>Nov 2021 – May 2022</p>
+                <p>	•Providing IT induction to new users when they join the organization.<br>
+					•Weekly and monthly cadence meetings with clients regarding infrastructure-related issues.<br>
+					•Preparing MBR & QBR Reports related to IT infrastructure and support.<br>
+					•Reviewing Service Desk logs, assigning tasks to team members, chasing progress.<br>
+					•Leading and maintaining a team of 12 technical support technicians in rotational shift and Providing IT induction to new employees.<br>
+					•Take part in daily operation calls to discuss Incident management.<br>
+					•Managing tickets with the Sapphire Ticking tool.<br>
+					•Installing windows patches, VPN clients and configure SCCM in laptop / Desktop.<br>
+					•Promoting new technologies with customers and offer ideas for process improvements.<br>
+					•Ensuring operational excellence by managing day-to-day and project activities in a thorough and timely manner.<br>
+					•Working in a 24/7 environment with an efficient team to meet the Service Level Agreement with the client.<br>
+					•Escalating calls whenever needed by following the Escalation Matrix for each Process.<br>
+					•Sending Backlog Sheet to FLS and same has been updated to OM.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Desktop Support Engineer at TechMahindra L-1</h3>
+                <p>Nov 2020 – Nov 2021</p>
+                <p>	•Installation / Reinstallation of OS, desktop patches, customer-specific applications, etc.<br>
+					•Mapping of users to the applications as per their profile.<br>
+					•Encryption and decryption in user laptop and desktop and back up the user data before installing the OS.<br>
+					•Maintaining all the asset records.<br>
+					•Installing, Configuring, and troubleshooting MS Outlook using exchange server.<br>
+					•Installing applications and troubleshooting hardware problems.<br>
+					•Working on Sapphire Tickets towards faster resolution within the agreed SLA.<br>
+					•Maintaining overall operations reliability for end-user computing platforms.<br>
+					•Providing training to users for critical application and aware them about computer security thefts.<br>
+					•Maintaining the Cisco video conference.<br>
+				</p>
+            </div>
+			<div class="timeline-item">
+                <h3>Desktop Support Engineer at TechMahindra L-0</h3>
+                <p>Nov 2020 – Nov 2021</p>
+                <p>	•Working in SLA based environment and sincerely adhering to it.<br>
+					•Sending a daily backlog updated sheet to Supervisor.<br>
+					•Support Ticket Management using Sapphire MS service Desk Software.<br>
+					•Handling desktop calls as well as the rollout of new software or configuration done as part of a service request.<br>
+					•VC (Video Conference) Meetings arrangements for the users.<br>
+					•Mail Configuration in IOS and Android Devices.<br>
+					•VPN Configuration for WHM system.<br>
+				</p>
             </div>
         </div>
+    </section>
 
-        <div id="contact" class="tab-content">
-            <div class="section">
-                <h3>Contact</h3>
-                <p>Email: <a href="mailto:sumitkhandelwal2000@gmail.com">sumitkhandelwal2000@gmail.com</a></p>
-                <p>Phone: +91 8421020563</p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/sumit-khandelwal-1940b1223" target="_blank">linkedin.com/in/sumit-khandelwal</a></p>
+    <section class="bg-light py-5" id="education">
+        <div class="container">
+            <h2 class="text-center">Education</h2>
+            <ul class="list-unstyled">
+                <li><strong>B.Sc. in Artificial Intelligence & Data Science</strong> - K.N University (2023-Present)</li>
+                <li><strong>12th Grade</strong> - Vidya Vihar School and Jr. College (2018)</li>
+                <li><strong>10th Grade</strong> - Matrix Academy School (2016)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container my-5" id="achievements">
+        <h2 class="text-center">Achievements</h2>
+				•Linus- Basic to Advance from Technical Guftgu 2023.<br>
+				•Promoted as an Sr. Engineer at Matter Motor Works Pvt. Ltd.<br>
+				•Promoted as an Acting superior at TechMahindra’s.<br>
+				•Received appreciation from the client TechMahindra’s for 100% SLA achievement at Mumbai location.<br>
+				•I received an appreciation certificate from Tech Mahindra in mail.<br>
+				•Certificate of Appreciation for Star Performer (03-2021).<br>
+				•Linux 28th Jan 23 Weekend Batch.<br>
+				•Jetking Certified Hardware and Networking Engineer+ Cloud V2(Feb 2019 to Jan 2020).<br>
+				•Received appreciation for 100% SLA achievement at TechMahindra.<br>
+				•Certificate of Appreciation for Star Performer (03-2021).<br>
+    </section>
+
+<footer class="bg-primary text-white py-4" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h4>Contact Information</h4>
+                <p>Gota-Ahmedabad</p>
+                <p>Email: sumitkhandelwal2000@gmail.com</p>
+                <p>Phone: +91 84210 20563</p>
+                
+            </div>
+            <div class="col-md-6">
+                <h4>Get in Touch</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light">Submit</button>
+                </form>
             </div>
         </div>
-    </div>
+    </div><p>&copy; 2025 Sumit Khandelwal. All Rights Reserved.</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2025 Sumit Khandelwal. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function showTab(tabName) {
-            const allTabs = document.querySelectorAll('.tab-content');
-            allTabs.forEach(tab => tab.classList.remove('active'));
-            const activeTab = document.getElementById(tabName);
-            activeTab.classList.add('active');
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
